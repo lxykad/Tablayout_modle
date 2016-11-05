@@ -33,7 +33,6 @@ public class HomeFragment extends Fragment {
         if (isVisibleToUser && mIsFirst) {
             mIsFirst = false;
 
-            //loadData();
         }
 
     }
