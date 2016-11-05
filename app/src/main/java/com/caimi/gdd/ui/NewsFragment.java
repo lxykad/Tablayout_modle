@@ -12,6 +12,7 @@ import com.caimi.gdd.R;
 
 public class NewsFragment extends Fragment {
 
+    private boolean mIsFirst = true;
 
     public NewsFragment() {
         // Required empty public constructor
@@ -25,4 +26,12 @@ public class NewsFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_news, container, false);
     }
 
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        super.setUserVisibleHint(isVisibleToUser);
+        if (isVisibleToUser && mIsFirst) {
+            mIsFirst = false;
+            //loadData();
+        }
+    }
 }
